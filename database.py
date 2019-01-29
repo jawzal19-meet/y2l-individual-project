@@ -30,13 +30,12 @@ def add_account(first_name,last_name,username,password,gender):
 
 
 def check_user_exists(username):
-
     account = session.query(Account).filter_by(username=username).first()
     if account==None:
 
         return False
     else:
-		return True
+    	return True
 
 
 def get_all_posts():
