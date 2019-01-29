@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" type="text/css" href="../static/style.css">
+
+<style>
+    body {
+        background-image: url("../static/background.jpg");
+    }
+</style>
+</head>
+<body>
+
+
+<a class="btn btn-primary" href="{{ url_for('add_post') }}" role="button">Create A Post</a> <center><h1>Courses Posts</h1>
+<h3>Choose What You Want To Learn About!</h3></center>
+
+
+{% for post in all_posts %}
+<center>
+<a href="/postpage/{{post.id}}" >
+<div class="flip-card" style="float:left;">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+    <img src="img_avatar.png" alt={{post.title}} style="width:150px;height:150px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>{{post.id}}) {{post.title}}</h1> 
+      <p>{{post.article}}</p> 
+      <p> {{post.video}}</p>
+      <p> {{post.quiz}}</p>
+
+    </div>
+  </div>
+ </div>
+
+</center>
+{% endfor %}
+</body>
+</html>

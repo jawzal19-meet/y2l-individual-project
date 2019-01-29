@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ADD POST</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='bootstrap.css') }}">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+    body {
+        background-image: url("../static/background.jpg");
+    }
+</style>
+        
+</head>
+<body>
+	<form method="POST">
+		<br>
+		<br>
+		<br>
+		<br>
+		<center>
+		<h3>Create A Post</h3>
+		Title
+		<input name="title" class="form-control" type="text" placeholder="Write Title" required style="width: 50%;"> Article
+		<textarea name="article" class="form-control" type="text" placeholder="Write Your Article" required style="width: 50%;"></textarea> 
+
+		Video
+		<input name="video" class="form-control" type="text" placeholder="Place Video URL" alt="NO Video" required style="width: 50%;">Quiz
+		<input name="quiz" class="form-control" type="text" placeholder="Place Quiz URL" alt="NO Quiz" required style="width: 50%;">
+		<input type="submit" name="post" class="btn btn-primary" placeholder="Post" style="margin: 2% ; align-self: center
+		;">
+	</form>
+	<a href="{{ url_for('courses') }}" name="post" class="btn btn-primary"
+	placeholder="Post">View Posts</a>
+	</center>
+</body>
+</html>

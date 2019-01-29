@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html>
+<html style="height: 100%;">
+    <head>
+        <title>THE STAR</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='bootstrap.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+<body background="bgimage.jpg">  
+    <center><h1 id="header">WELCOME TO THE STAR</h1>
+    <h3 id="header">Your Turn To Shine</h3>
+    <a href="https://backgroundcheckall.com/wp-content/uploads/2017/12/doctors-background-3580.jpg"></a>
+    <form method="POST">
+        <div class="content">
+        <div class="form-group">
+            <div class="row">
+                <div class="col-5"> 
+                    <label for="exampleInputEmail1">Username</label>
+                    <input type="text" name="username" class="form-control" id="exampleInputEmail1" placeholder="Enter Username">
+                    
+                </div>
+            </div>
+        <div class="row">
+            <div class="col-5">     
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Password</label>
+                    <input type="password" name="password"class="form-control" id="exampleInputPassword1" placeholder="Password">
+                </div>
+            </div>
+        
+    </div>
+
+
+        </div>
+
+        <input type="submit" class="btn btn-primary" value="Log in">
+
+    </form>
+
+    <script src="{{ url_for('static', filename='jquery.js')}}"></script>  
+    <script src="{{ url_for('static', filename='bootstrap.bundle.js')}}"></script>
+    </div>
+    </center>
+</body>
+
+
+</html>
